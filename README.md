@@ -51,5 +51,23 @@ They share the Any class, which acts as a superclass for all Kotlin classes. It 
 The superclass of all non-null types in Kotlin, this means that any non-nullable type inherits from Any.<br>
 Includes fundamental methods such as  `equals()`, `hashCode()`, and `toString()`.
 
+### Explanation of Any?
+`Any?` can hold any type of value, including null. In Kotlin, the ? after a type indicates that the type is nullable, meaning it can represent either a value of that type or null.<br>
+is used when you want to allow a variable, parameter, or return value to be any type, including `null`.
+
+### Explanation of Nothing
+In Kotlin `Nothing` is a special type that represents a value that never exists. it is used to indicate that a function or expression will never successfully complete, either because it always throws an exception or because it enters an infinite loop.
+
+- It consistently throw an exception.
+- It is specifically designed to handle fatal errors.
+- It clearly signals to the compiler and other developers that a particular execution path should never continue normally.
+
+The primary purpose of `Nothing` is to improve code clarity and safety, particularly in error handling and control flow.
+
+```kotlin
+fun throwError(message: String): Nothing {
+    throw IllegalArgumentException(message)
+}
+```
 
 
