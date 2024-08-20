@@ -47,5 +47,9 @@ The purpose of a data class is to hold data, unlike a normal class. It must have
 ### Which class do all Kotlin classes have in common?
 They share the Any class, which acts as a superclass for all Kotlin classes. It is similar to the Object class in Java.
 
+### Explanation of Any
+The superclass of all non-null types in Kotlin, this means that any non-nullable type inherits from Any.<br>
+Includes fundamental methods such as  `equals()`, `hashCode()`, and `toString()`.
+
 
 
