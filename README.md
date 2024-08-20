@@ -117,6 +117,38 @@ name?.let {
 ```
 In summary null safety help us to minimize the risk of null pointer exceptions by making nullability explicit and providing safe ways to handle `null` values.
   
+### Explain Inheritance
+Allows creating new classes based on existing ones.
+- The keyword open is used to indicate that a class can be inherited.
+- Classes are final if not marked with the open keyword.
+- The base class is known as the superclass, and the derived class as the subclass.
+- You can alter the behavior of an inherited method using the override keyword.
 
+In summary, inheritance allows creating class hierarchies, reusing code, extending functionalities, and achieving a more organized programming structure.
 
-  
+### What is polymorphism?
+- The ability of objects from different classes to behave in multiple ways.
+- Overriding or Overloading a method are types of polymorphism.
+- We can achieve polymorphism through inheritance or interfaces.
+- Polymorphism also allows treating objects from different subclasses as instances of a common superclass. For example, you can create an instance of Cat, but when used in a context where Animal is expected, it behaves like an Animal.
+
+### What is overloading?
+Method overloading refers to having methods in the same class with the same name but different parameters.
+
+### What is overriding?
+Method overriding refers to providing a new implementation of a method in a subclass that is already defined in its superclass, giving it a new behavior in the subclass.
+
+### What is abstraction?
+It refers to modeling real-world objects by focusing on their essential aspects and relevant behaviors while hiding internal details. Examples of abstraction include classes and objects that define properties and methods.
+
+### What is encapsulation?
+It refers to the practice of hiding the internal details of a class or object, and this is achieved using access modifiers. The benefits of encapsulation are the following:<br>
+
+- Hiding details: The internal details of a class are hidden and cannot be modified from outside the class.
+
+- Improves security: it limits access to the member of a class and helps prevent data corruption.
+
+- Facilitates maintenance: Internal changes can be made to the class without affecting the code that interacts with the class.
+
+- Promotes good practices: Access is enforced through public methods.
+
