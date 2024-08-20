@@ -32,3 +32,20 @@ println(age)   // Output: 30
 println(email) // Output: alice@example.com
 
 ```
+
+### What is a class in Kotlin?
+It is a template that defines attributes and methods, objects can be created from a class. It is used to define the structure and behavior of objects in the real world.
+- It can include a primary constructor and one or more secondary constructors.
+- Properties can be mutable or immutable.
+- To inherit from a class, the keyword "open" is used.
+- Classes are final if they are not marked with the "open" keyword.
+- The base class is known as the superclass, and the derived class is known as the subclass.
+
+### Data class vs Class
+The purpose of a data class is to hold data, unlike a normal class. It must have at least one parameter, cannot be open, and has default methods that a normal class does not have. Therefore, data classes cannot be inherited.
+
+### Which class do all Kotlin classes have in common?
+They share the Any class, which acts as a superclass for all Kotlin classes. It is similar to the Object class in Java.
+
+
+
