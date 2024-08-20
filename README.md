@@ -69,5 +69,15 @@ fun throwError(message: String): Nothing {
     throw IllegalArgumentException(message)
 }
 ```
+### Explanation of Unit
+In Kotlin `Unit` is a special type that represents the absence of a meaningful value. it is the equivalent of `void` in other languages like Java.<br>
+When a function  doesn’t explicitly return a value, its return type is inferred as `Unit`.
 
+- Functions that perform actions but do not need to return a result should use `Unit`.
+  
+```kotlin
+fun showMessage(message: String): Unit {
+    println(message)
+}
+```
 
