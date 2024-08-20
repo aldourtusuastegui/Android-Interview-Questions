@@ -80,4 +80,43 @@ fun showMessage(message: String): Unit {
     println(message)
 }
 ```
+### Explanation of Null safety
+Null safety in Kotlin was designed to prevent nullPointerExceptions. which are common sources of runtime crashes in many programming languages. Kotlin handles null safety through its type system, which distinguishes between nullable and non-nullable types.
 
+- By default, all the types in Kotlin are non-nullable. This means that a variable of a non-nullable type cannot hold a `null` value.
+```kotlin
+var name: String = "John"
+// name = null // This will cause a compilation error
+```
+- To allow a variable to hold a `null` value, you need to explicitly declare it as nullable by appending a question mark `?` to the type.
+```kotlin
+var name: String? = "John"
+name = null // This is allowed
+```
+- When working with nullables types, you can use the safe call operator `?.`, if the variable is `null`, the expression returns `null` instead of throwing a `NullPointerException`.
+```kotlin
+val length: Int? = name?.length // if name is null, length will also be null.
+```
+- The Elvis operator `?:` provides a way to handle `null` values by providing a default value if the expression is `null`
+```kotlin
+val length: Int = name?.length ?: 0 // if name is null, length will be set to 0
+```
+- If you are sure that a variable is not `null`, you can use the non-null assertion operator `!!` it should be used cautiosly because if the varibable is null it will throw a  `NullPointerException`.
+```kotlin
+val length: Int = name!!.length //if name is null, this will throw a NullPointerException.
+```
+- You can use the `as?` operator for safe casting. If the cast fails, it returns `null` instead of throwing a `ClassCastException`.
+```kotlin
+val number: Int? = someObject as? Int
+```
+- You can use the `let` function with the safe call operator to execute a block of code only if the variable is not `null`.
+```kotlin
+name?.let {
+    println("Name length: ${it.length}")
+}
+```
+In summary null safety help us to minimize the risk of null pointer exceptions by making nullability explicit and providing safe ways to handle `null` values.
+  
+
+
+  
