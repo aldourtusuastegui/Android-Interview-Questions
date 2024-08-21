@@ -152,3 +152,14 @@ It refers to the practice of hiding the internal details of a class or object, a
 
 - Promotes good practices: Access is enforced through public methods.
 
+### What are access modifiers?
+Access modifiers are used to control the visibility of classes, properties, and functions. These modifiers determine which parts of the code can access the member of a class or package.
+
+- public modifier : Members marked as public are accessible from anywhere in the code.
+
+- internal modifier : Members marked as internal are only accessible within the same module.
+
+- protected modifier: Members marked as protected are accessible in the class where they are defined and in their subclasses.
+
+- private modifier: Members marked as private are only accessible to the class in which they are defined.
+
