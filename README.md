@@ -182,3 +182,29 @@ abstract class Shape {
 }
 ```
 Use abstract class when a class doesn't make sense to be instantiated. it is a template for other classes (class hierarchy).
+
+### What are interfaces?
+Allow defining abstract methods and properties that must be provided by the classes implementing them. it is a contract that a class has to follow.
+- A class can implement multiple interfaces.
+- Interfaces cannot be instantiated.
+- An interface can also have concrete methods.
+- These concrete methods can be overriden.
+- They can define properties with a default value or have abstract properties.
+```kotlin
+interface Drawable { 
+
+   val myProperty: Int get() = 42
+
+   fun draw() 
+
+   fun drawLine() {
+       println("draw line")
+   }
+
+}
+```
+They allow us to define common behaviors outside the class hierarchy.
+interfaces help us to:
+- Abstract behaviors.
+- Apply polymorphism.
+- Unify layers.
