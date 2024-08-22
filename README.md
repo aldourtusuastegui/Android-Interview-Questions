@@ -208,3 +208,16 @@ interfaces help us to:
 - Abstract behaviors.
 - Apply polymorphism.
 - Unify layers.
+
+### Explain composition
+instead of implementing all functionalities in a single class, they are modularized into independent instances.
+
+### Explain composition over inheritance
+Preferably use composition over inheritance, classes should have polymorphic behavior through composition rather than inheritance, achieved by using interfaces. Use composition to reuse behaviors and inheritance to inherit properties.
+
+### What is the difference between val and var?
+`val` means that is immutable, its value cannot change once initialized, they are read-only variables. `var`, on other hand, means that it can change its value, they are read-write variables.
+
+### What is the difference between val and const?
+Both are immutable, but the value of `const` must be known at compile time, whereas the value of `val`can also be assigned at runtime.<br>
+A constant can only be initialized as a `String` or with a primitive value. Constants must be in a companion object or declared as a top-level property.
