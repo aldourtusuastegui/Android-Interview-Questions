@@ -163,3 +163,22 @@ Access modifiers are used to control the visibility of classes, properties, and 
 
 - private modifier: Members marked as private are only accessible to the class in which they are defined.
 
+### What are abstract classes?
+These are classes that cannot be instantiated but can be used as bases for other classes. They are useful for defining a common structure for related classes, but creating objects from the base class doesn't have a practical purpose.
+
+- Cannot be instantiated.
+- Can have properties and methods.
+- Methods can be abstract or concrete.
+- Abstract properties and methods must  be implemented in the subclass that make use of the abstract class.
+```kotlin
+abstract class Shape {
+   var color: String = "unknown"
+
+   abstract fun calculateArea() : Double
+
+   fun description() {
+       println("this shape has an unknown color")
+   }
+}
+```
+Use abstract class when a class doesn't make sense to be instantiated. it is a template for other classes (class hierarchy).
