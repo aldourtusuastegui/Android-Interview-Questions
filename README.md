@@ -221,3 +221,12 @@ Preferably use composition over inheritance, classes should have polymorphic beh
 ### What is the difference between val and const?
 Both are immutable, but the value of `const` must be known at compile time, whereas the value of `val`can also be assigned at runtime.<br>
 A constant can only be initialized as a `String` or with a primitive value. Constants must be in a companion object or declared as a top-level property.
+
+### What is a companion object?
+It is the way Kotlin handles statics. They have to be declared within a class. The class can access the members of the companion object, and it can implement interfaces. it is not necessary to instantiate a class to access the companion object.
+
+### What is the difference between == and ===?
+== is used to compare the values stored in variables, and === is used to check if the references of the variables are equal or not. However, in the case of primitive types, === also checks the value, not just the reference.
+
+### What are lazy and lateinit?
+They are two ways to initialize variables until they are needed. Both are used to improve performance and reduce memory usage when you have variables that do not to be initialized immediately.
