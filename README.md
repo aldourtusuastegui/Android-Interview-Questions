@@ -116,6 +116,21 @@ name?.let {
 }
 ```
 In summary null safety help us to minimize the risk of null pointer exceptions by making nullability explicit and providing safe ways to handle `null` values.
+
+### Explain final keyword
+It is used to prevent a class, method or property from being changed, (overridden or inherited). By default classes in Kotlin are `final`, meaning you can't inherit from them unless you mark them as `open`.
+
+```kotlin
+open class Animal {
+    final fun makeSound() {
+        println("Some sound")
+    }
+}
+
+class Dog : Animal() {
+    // I can't override the makeSound method here.
+}
+```
   
 ### Explain Inheritance
 Allows creating new classes based on existing ones.
