@@ -245,3 +245,39 @@ It is the way Kotlin handles statics. They have to be declared within a class. T
 
 ### What are lazy and lateinit?
 They are two ways to initialize variables until they are needed. Both are used to improve performance and reduce memory usage when you have variables that do not to be initialized immediately.
+
+### Explain lateinit
+Means late initialization. It is used when you are certain that the property will be initialized before it is used, but you want to delay the initialization. It is used to declare properties that cannot be null.
+
+Use cases:
+- Properties that need to be initialized in a secondary constructor.
+- Properties that need to be initialized in the lifecycle, for example in onCreate.
+
+Characteristics:
+- Does not allow primitive values (Double, Int, Boolean, Char, etc).
+- You cannot use lateinit with objects that can be nullable.
+- It must be ensured that lateinit was initialized before use.
+- If not initialized, it throws a LateInitPropertyAccessException.
+- isInitialized checks if it was initialized.
+- Can only be used with mutable properties (var).
+
+```kotlin
+lateinit var someValue: String
+```
+
+### Explain lazy
+Means lazy initialization, you can postpone the initialization of a property until the moment it is required.
+
+Use cases:
+- It is used when you want to perform a costly initialization only when t is actually needed, which helps improve performance.
+- Database connections.
+- Network requests.
+
+Characteristics:
+- `lazy` can only be initialized once and will retain its value.
+- it makes use of lambdas.
+- it can contain any type of object.
+
+```kotlin
+val lazyInt: Int by lazy { 42 }
+```
