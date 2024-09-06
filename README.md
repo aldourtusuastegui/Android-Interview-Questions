@@ -281,3 +281,16 @@ Characteristics:
 ```kotlin
 val lazyInt: Int by lazy { 42 }
 ```
+
+### Explain Sequences
+In Kotlin, sequences are an alternative to traditional collections. While collections like `List` or `Set` store all elements in memory, sequences generate them as needed, which is known as lazy processing. This means that operations on sequences are only performed when the final result is required, in contrast to collections where each intermediate step generates a new collection immediately.
+
+Sequence performs all the processing steps one-by-one for every single element. In turn, Iterable completes each step for the whole collection and then proceeds to the next step.
+
+So, the sequences let you avoid building results of intermediate steps, therefore improving the performance of the whole collection processing chain. However, the lazy nature of sequences adds some overhead which may be significant when processing smaller collections or doing simpler computations. Hence, you should consider both Sequence and Iterable and decide which one is better for your case.
+
+Example: 
+![image](https://github.com/user-attachments/assets/10d8da57-d2fe-4e32-84e6-f3c9e36c55e6)
+
+
+
