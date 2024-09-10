@@ -292,5 +292,25 @@ So, the sequences let you avoid building results of intermediate steps, therefor
 Example: 
 ![image](https://github.com/user-attachments/assets/10d8da57-d2fe-4e32-84e6-f3c9e36c55e6)
 
+### Data Structures
 
+### List
+A list is an ordered collection that can contain duplicate elements. Kotlin provides two types of lists:
+- `List` (immutable): You cannot modify the list once it is created.
+- `MutableList` (mutable): You can add, remove, or change elements.
+
+### Set
+A set is an unordered collection that does not allow duplicate elements. Like lists, there are two versions:
+- `Set` (immutable): Elements cannot be changed.
+- `MutableSet` (mutable): You can add and remove elements.
+
+### Map
+A map is a collection that associates keys with values. Kotlin provides immutable and mutable maps.
+- `Map` (immutable): Keys and values cannot be modified.
+- `MutableMap` (mutable): You can add, remove, or update key-value pairs.
+
+### Array
+An Array is a fixed-size collection that can store data of specific type. Unlike lists, arrays have a predefined size and cannot grow or shrink once created.
+
+### ArrayList
 
