@@ -313,4 +313,19 @@ A map is a collection that associates keys with values. Kotlin provides immutabl
 An Array is a fixed-size collection that can store data of specific type. Unlike lists, arrays have a predefined size and cannot grow or shrink once created.
 
 ### ArrayList
+ArrayList is a concrete class, it is a dynamic list that is ideal for situationes where you need to modify the list frequently and the list size may change.
+
+### LinkedList
+A LinkedList is a collection where elements are store in nodes. Each node contains data an referenes to the next element.
+
+### Double LinkedList
+is a collection where elements are store in node. Each node contains data an references to the next and previous element.
+
+### Stack
+A stack is a data structure that follows the `Last-In-First-Out (LIFO)` principle. This means that the last element added to the stack is the first one to be removed.
+
+### Queue
+A queue is a data structure that follows `First-In-First-Out (FIFO)` principle. This means that the first element added to the queue will be the first one to be removed, similar to a queue of people waiting in line.
+
+
 
