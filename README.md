@@ -327,5 +327,12 @@ A stack is a data structure that follows the `Last-In-First-Out (LIFO)` principl
 ### Queue
 A queue is a data structure that follows `First-In-First-Out (FIFO)` principle. This means that the first element added to the queue will be the first one to be removed, similar to a queue of people waiting in line.
 
-
+### Summary
+- Iterable: Interface
+- Collection: Interface
+- List: Interface
+- Map: Interface
+- Set: Interface
+- ArrayList: Concrete Class
+- Array: Concrete Class
 
