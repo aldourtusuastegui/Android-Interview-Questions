@@ -336,3 +336,54 @@ A queue is a data structure that follows `First-In-First-Out (FIFO)` principle. 
 - ArrayList: Concrete Class
 - Array: Concrete Class
 
+### Kotlin Flows
+
+### Flow
+- Type: Cold
+- Only emits values when its collected.
+- Does not retain values. Each time its collected, it starts the logic from scratch.
+- Use case: For one-time operations like API call or database queries.
+
+```kotlin
+fun fetchMovies(): Flow<List<Movie>> = flow {
+    val movies = api.getMovies()  // Executes only when collected
+    emit(movies)
+}
+```
+
+### StateFlow
+- Type: Hot
+- Retains the last emitted value and delivers it immediately to new collectors.
+- Ideal for persisting state like UI state.
+- Use case: To handle state that should survive configuration changes (like screen rotations).
+  
+```kotlin
+private val _moviesStateFlow = MutableStateFlow<List<Movie>>(emptyList())
+val moviesStateFlow: StateFlow<List<Movie>> = _moviesStateFlow
+```
+### SharedFlow
+- Type: Hot
+- One-time events that should not persist or be re-emitted to new collectors (like error messages, navigation events, or user interactions).
+- When you need multiple collectors to respond to the same event or notification.
+- Events are not stored. New collectors won’t receive old events unless replay is configured.
+
+```koprivate val _events = MutableSharedFlow<String>()
+val events: SharedFlow<String> = _events
+
+fun triggerErrorMessage() {
+    viewModelScope.launch {
+        _events.emit("An error occurred")  // Emits event to active collectors
+    }
+}
+
+// Collecting events in the UI
+viewModel.events.collect { event ->
+    showToast(event)  // This will show the error message if the collector was active at emission time
+}
+```
+
+### Cold Flow
+Only emits values when there are active collectors. Each subscriber receives the full sequence from the beginning.
+
+### Hot Flow
+Emits values regardless of whether there are collectors. Subscribers who join late may miss previous values, but the flow continues operating.
